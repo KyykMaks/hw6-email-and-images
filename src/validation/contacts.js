@@ -8,6 +8,7 @@ export const createContactSchema = Joi.object({
     .messages({
       'string.pattern.base': 'Номер мае бути з 12 цифр +380XXXXXXXXX',
     }),
+
   email: Joi.string().email().required().min(3).max(20),
   isFavourite: Joi.boolean(),
   contactType: Joi.string()
